@@ -1,0 +1,2 @@
+docker start eosio
+docker start keosd

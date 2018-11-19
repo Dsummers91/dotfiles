@@ -1,0 +1,15 @@
+#!/bin/bash
+toggle=$((pactl list sinks | grep -q Mute:.no && echo 1) || echo 0)
+pactl set-sink-mute 0 $toggle
+
+
+if [ "$1" == "mute" ]; then
+  pactl set-sink-mute 0 1
+  echo "muted"
+elif 
+  [ "$toggle" == 1 ]; then
+  echo "muted"
+elif
+  [ "$toggle" == 0 ]; then
+  echo "unmuted"
+fi
