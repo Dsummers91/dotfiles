@@ -27,7 +27,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal --working-directory="`xcwd`"
+bindsym $mod+Return exec terminator --working-directory="`xcwd`"
 bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # kill focused window

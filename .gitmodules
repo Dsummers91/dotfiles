@@ -1,0 +1,9 @@
+[submodule ".yadm/haskell-vim"]
+	path = .yadm/haskell-vim
+	url = /home/deon/.vim/bundle/haskell-vim/
+[submodule ".yadm/vim-elixir"]
+	path = .yadm/vim-elixir
+	url = /home/deon/.vim/bundle/vim-elixir/
+[submodule ".yadm/vim-solidity"]
+	path = .yadm/vim-solidity
+	url = /home/deon/.vim/bundle/vim-solidity/
