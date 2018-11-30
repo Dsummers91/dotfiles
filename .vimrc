@@ -29,3 +29,7 @@ if exists("+undofile")
   set undofile
 endif
 
+
+" Show full line path
+set statusline+=%F
+
