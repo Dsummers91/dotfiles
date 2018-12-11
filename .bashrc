@@ -151,8 +151,6 @@ setxkbmap -option caps:none
 [ -f /home/deon/.travis/travis.sh ] && source /home/deon/.travis/travis.sh
 
 
-motivate
-
 cd() {
   if builtin cd "$@" 3>&2 2>/dev/null; then
     :

@@ -1,7 +1,20 @@
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
 [profiles]
   [[default]]
-    show_titlebar = false
     background_color = "#271f19"
     cursor_color = "#ffffff"
     foreground_color = "#ffffff"
-    palette = "#000000:#800000:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8:#000000:#800000:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8"
+    login_shell = True
+    palette = "#000000:#f57900:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8:#000000:#f57900:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8"
+    show_titlebar = False
