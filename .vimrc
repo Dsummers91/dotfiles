@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vader.vim'
 Plug 'scrooloose/nerdcommenter'
 
+let g:go_fmt_command = "goimports"
+
 set paste
 verbose set autoindent
 
