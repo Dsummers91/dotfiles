@@ -136,6 +136,7 @@ export PATH=$PATH:/home/deon/golang/bin
 export PATH=$PATH:$HOME/.opam/4.05.0/bin
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/.da/bin
+export PATH=$PATH:$HOME/.mvn/bin
 export PATH=$PATH:$HOME/.local/bin
 
 #toggle=$((pactl list sinks | grep -q Mute:.no && echo 1) || echo 0)
