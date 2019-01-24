@@ -3,6 +3,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vader.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+
 
 let g:go_fmt_command = "goimports"
 
@@ -31,6 +36,7 @@ if exists("+undofile")
   set undofile
 endif
 
+map <C-o> :NERDTreeToggle<CR>
 
 " Show full line path
 set statusline+=%F
