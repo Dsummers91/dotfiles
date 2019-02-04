@@ -6,7 +6,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+
 
 
 let g:go_fmt_command = "goimports"
@@ -37,7 +38,8 @@ if exists("+undofile")
 endif
 
 map <C-o> :NERDTreeToggle<CR>
-
-" Show full line path
-set statusline+=%F
-
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+call plug#end()
