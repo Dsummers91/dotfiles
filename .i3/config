@@ -178,3 +178,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # TouchPad disable/enable
 bindsym $mod+t exec "synclient TouchpadOff=1"
 bindsym $mod+Shift+t exec "synclient TouchpadOff=0"
+
+## Hotkeys
+
+bindsym $mod+o exec google-chrome-stable
