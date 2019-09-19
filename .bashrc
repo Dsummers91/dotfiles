@@ -9,16 +9,12 @@ case $- in
 esac
 
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
+# Avoid duplicates
+export HISTCONTROL=ignoreboth:erasedups
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -135,7 +131,7 @@ export GOPATH=/home/deon/golang
 export PATH=$PATH:/home/deon/golang/bin
 export PATH=$PATH:$HOME/.opam/4.05.0/bin
 export PATH=$PATH:$HOME/scripts
-export PATH=$PATH:$HOME/.da/bin
+export PATH=$PATH:$HOME/.daml/bin
 export PATH=$PATH:$HOME/.mvn/bin
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
@@ -157,8 +153,29 @@ cd() {
   if builtin cd "$@" 3>&2 2>/dev/null; then
     :
   else
-    if builtin cd "$HOME/$1" 3>&2 2>/dev/null;then
+    if builtin cd "$HOME/$1" 3>&2 2>/dev/null
+    then
       echo -e "\e[92m$1 exists in home directory going there\e[39m"
+    elif 
+      builtin cd "$HOME/dev/$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in dev directory going there\e[39m"
+    elif
+      builtin cd "../$1" 3>&2 2>/dev/null
+    then
+      echo  -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
     else
       echo -e "\e[31mbash: cd $1 No such file or directory"
     fi
@@ -185,3 +202,13 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash

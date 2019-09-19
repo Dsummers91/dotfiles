@@ -1,9 +1,10 @@
-timesheet.*
 ## git config --global core.excludesfile ~/.gitignore_global
+my-scripts/
+.envrc
 
 # Compiled source #
 ###################
-*.com
+#*.com
 *.class
 *.dll
 *.exe
@@ -43,6 +44,3 @@ Thumbs.db
 *.swo
 *.swn
 *.sw*
-
-my-scripts/
-
