@@ -6,14 +6,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
 Plug 'elixir-editors/vim-elixir'
+Plug 'davidhalter/jedi-vim'
+Plug 'vimwiki/vimwiki'
 
 let g:go_fmt_command = "goimports"
 let g:pymode_options_colorcolumn = 0
+let g:jedi#force_py_version = 3
 
-set paste
+"set paste
 verbose set nonumber
 verbose set autoindent
-
+set nocompatible
 syntax on
 filetype plugin indent on
 " show existing tab with 4 spaces width

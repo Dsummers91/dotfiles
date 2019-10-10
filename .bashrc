@@ -71,7 +71,7 @@ unset color_prompt force_color_prompt
 
 # override PS1
 # export PS1="\e[34m\W \e[39m\$ "
-export PS1="\e[34m\W \e[39m\$ "
+export PS1="\e[34m\W \e[90m \n\$\e[39m "
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -176,13 +176,19 @@ cd() {
       builtin cd "../../../../$1" 3>&2 2>/dev/null
     then
       echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    #current popular project
+    elif
+      builtin cd "$HOME/dev/themove/$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in themove directory going there\e[39m"
     else
       echo -e "\e[31mbash: cd $1 No such file or directory"
     fi
   fi
 
   IFS="/"; declare -a Array=($PWD)
-  export PS1="\e[34m${Array[-1]} \e[39m\$ "
+  export PS1="\e[34m${Array[-1]} \e[90m \n\$\e[39m "
+  #export PS1="\e[34m${Array[-1]} \e[39m\$ "
   unset IFS
 }
 
