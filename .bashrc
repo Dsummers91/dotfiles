@@ -140,6 +140,7 @@ export PATH=$PATH:$HOME/.local/bin
 #pactl set-sink-mute 0 $toggle
 alias python=python3
 alias chrome=google-chrome-stable
+alias wiki="vim ~/vimwiki/index.wiki"
 eval "$(direnv hook bash)"
 
 #disable caps lock
@@ -218,3 +219,5 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/deon/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+
+eval "$(thefuck --alias)"

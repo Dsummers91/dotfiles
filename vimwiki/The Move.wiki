@@ -1,0 +1,25 @@
+* [[Architecture]]
+  - [[TM Current Architecture]]
+* Machine Learning
+  - [[Machine Learning]] Wiki
+  - 
+
+
+==== Task ====
+- [ ] Setup Kafka
+- [ ] Automate Filters
+- [ ] Better Filtering (Approve, right now its only reject)
+- [ ] Integrate with more websites
+* Create Test Cases
+  - [ ] Filter
+  - [ ] Populator
+  - [ ] Data
+  - [ ] Admin
+  - [ ] Client
+
+==== Completed ====
+- [X] Look into eventbrite embedded
+- [X] V2 Client Side Website
+- [X] Log IP on subscribe
+- [X] Working Admin Portal 
+
