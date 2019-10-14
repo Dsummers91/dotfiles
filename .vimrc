@@ -1,12 +1,15 @@
 execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 
+Plug 'davidhalter/jedi-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'udalov/kotlin-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
-Plug 'elixir-editors/vim-elixir'
-Plug 'davidhalter/jedi-vim'
 Plug 'vimwiki/vimwiki'
 
 let g:go_fmt_command = "goimports"
@@ -19,11 +22,11 @@ verbose set autoindent
 set nocompatible
 syntax on
 filetype plugin indent on
-" show existing tab with 4 spaces width
+" show existing tab with 2 spaces width
  set tabstop=2
-" when indenting with '>', use 4 spaces width
+" when indenting with '>', use 2 spaces width
  set shiftwidth=2
-" On pressing tab, insert 4 spaces
+" On pressing tab, insert 2 spaces
  set expandtab
 
 if exists("+undofile")
