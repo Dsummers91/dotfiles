@@ -27,8 +27,9 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator --working-directory="`xcwd`"
-bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminology -d="`xcwd`"
+bindsym $mod+Shift+Return exec terminator --working-directory="`xcwd`"
+#bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -178,3 +179,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # TouchPad disable/enable
 bindsym $mod+t exec "synclient TouchpadOff=1"
 bindsym $mod+Shift+t exec "synclient TouchpadOff=0"
+
+## Hotkeys
+
+bindsym $mod+o exec google-chrome-stable

@@ -1,0 +1,12 @@
+== DATA ==
+The API/Database exists here.
+
+== POPULATOR ==
+
+== CLIENT ==
+
+
+== ADMIN ==
+Where we handle
+
+== FILTER ==
