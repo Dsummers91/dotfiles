@@ -1,21 +1,17 @@
-* Text Classificaiton
+== Text Classification==
+  * [MonkeyLearn] https://monkeylearn.com/text-classification/
+  * [TensorFlow] https://www.tensorflow.org/tutorials/keras/basic_text_classification
 
+== Methods ==
+  * [Automated Text Classification] https://towardsdatascience.com/automated-text-classification-using-machine-learning-3df4f4f9570b
 
- machine-learning-methods.md                                                               buffers
-## Text Classification
- [MonkeyLearn] https://monkeylearn.com/text-classification/
- [TensorFlow] https://www.tensorflow.org/tutorials/keras/basic_text_classification
-
-### Methods
-  [Automated Text Classification] https://towardsdatascience.com/automated-text-classification-using-machine-learning-3df4f4f9570b
-
- - [Zero-shot learning] https://paralleldots.xyz/Zero-Shot-Learning-for-Text-Classification
- - Convolutional Neural Networks used for images
- - [Text processing] https://towardsdatascience.com/machine-learning-text-processing-1d5a2d638958 
+  * [Zero-shot learning] https://paralleldots.xyz/Zero-Shot-Learning-for-Text-Classification
+  * Convolutional Neural Networks used for images
+  * [Text processing] https://towardsdatascience.com/machine-learning-text-processing-1d5a2d638958 
 
 
 
-### Helpful links
-[Ultimate guide to deal with Text Data] https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/ 
+== Helpful links ==
+  * [Ultimate guide to deal with Text Data] https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/ 
 
 

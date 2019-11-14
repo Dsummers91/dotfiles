@@ -4,5 +4,46 @@
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
-echo "Init submodules"
-yadm submodule update --recursive --init
+# Prepare  Postgres
+sudo apt-get install wget ca-certificates
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+
+sudo apt update -y
+
+sudo apt install jq postgresql arandr postgresql-contrib python3-dev pgadmin4 pgadmin4-apache2 python3-pip python3-setuptools python3-venv gtk3-nocsd vim terminator terminology direnv libpq-dev thefuck build-essential libx11-dev httpie ranger -y
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+
+curl https://sh.rustup.rs -sSf | sh
+
+pip3 install awscli --upgrade --user
+
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+sudo apt-get update
+sudo apt-get install esl-erlang
+sudo apt-get install elixir
+sudo snap install ngrok
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py --user
+rm get-pip.py
+
+sudo snap install docker
+
+pip install haxor-news --user
+
+wget https://github.com/schischi/xcwd/archive/master.zip
+unzip master.zip
+pushd xcwd-master
+sudo make && sudo make install
+popd
+rm master.zip
+rm -rf xcwd-master
+

@@ -2,10 +2,35 @@
   - [[TM Current Architecture]]
 * Machine Learning
   - [[Machine Learning]] Wiki
-  - 
+* [[TM Tech Stack]]
+* [[Move - Client side notes]]
 
+==== Bugs ====
+- [ ] Fix Eventbrite Queries
+- [ ] Fix Populator
 
-==== Task ====
+=== Feature ===
+- [ ] Grab GeoIP Data on IP Address
+- [ ] Auto Select Based on City
+
+==== Immediate Tasks ====
+- [ ] Add edit buttons on admin pages
+- [ ] update avatars on daily event scrapings if updated
+- [ ] Update splash image background
+
+=== Important But not Urgent? ===
+- [ ] Set anonymous cookies for users we dont know for tracking
+- [ ] Create Platform Table (Eventbrite/TicketMaster/etc)
+- [ ] Automatically grab long summary from eventbrite
+- [ ] Add Time Zone field for cities
+
+=== Research ===
+- [ ] Invite Link after member buys tickets to group
+- [ ] GroupMe API
+
+==== Backlog ====
+- [ ] Duplicate Database from Prod to Staging (daily?/weekly?)
+- [ ] Setup Load Balancing for API Endpoints / Possibly move to serverless
 - [ ] Setup Kafka
 - [ ] Automate Filters
 - [ ] Better Filtering (Approve, right now its only reject)
@@ -16,10 +41,5 @@
   - [ ] Data
   - [ ] Admin
   - [ ] Client
-
-==== Completed ====
-- [X] Look into eventbrite embedded
-- [X] V2 Client Side Website
-- [X] Log IP on subscribe
-- [X] Working Admin Portal 
-
+- [ ] Create a CI/CD Pipeline
+- [ ] Setup CD for API Gateway

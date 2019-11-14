@@ -1,7 +1,6 @@
 execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 
-Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -11,8 +10,13 @@ Plug 'udalov/kotlin-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
 Plug 'vimwiki/vimwiki'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 
 let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+
 let g:pymode_options_colorcolumn = 0
 let g:jedi#force_py_version = 3
 
