@@ -17,4 +17,6 @@
     foreground_color = "#ffffff"
     login_shell = True
     palette = "#000000:#f57900:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8:#000000:#f57900:#61ce3c:#fbde2d:#253b76:#ff0080:#8da6ce:#f8f8f8"
+    scrollback_infinite = True
+    scrollback_lines = 501
     show_titlebar = False

@@ -9,16 +9,12 @@ case $- in
 esac
 
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
+# Avoid duplicates
+export HISTCONTROL=ignoreboth:erasedups
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -75,7 +71,7 @@ unset color_prompt force_color_prompt
 
 # override PS1
 # export PS1="\e[34m\W \e[39m\$ "
-export PS1="\e[34m\W \e[39m\$ "
+export PS1="\e[34m\W \e[90m \n\$\e[39m "
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -136,7 +132,7 @@ export GOPATH=/home/deon/golang
 export PATH=$PATH:/home/deon/golang/bin
 export PATH=$PATH:$HOME/.opam/4.05.0/bin
 export PATH=$PATH:$HOME/scripts
-export PATH=$PATH:$HOME/.da/bin
+export PATH=$PATH:$HOME/.daml/bin
 export PATH=$PATH:$HOME/.mvn/bin
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
@@ -145,6 +141,7 @@ export PATH=$PATH:$HOME/.local/bin
 #pactl set-sink-mute 0 $toggle
 alias python=python3
 alias chrome=google-chrome-stable
+alias wiki="vim ~/vimwiki/index.wiki"
 eval "$(direnv hook bash)"
 
 #disable caps lock
@@ -158,15 +155,42 @@ cd() {
   if builtin cd "$@" 3>&2 2>/dev/null; then
     :
   else
-    if builtin cd "$HOME/$1" 3>&2 2>/dev/null;then
+    if builtin cd "$HOME/$1" 3>&2 2>/dev/null
+    then
       echo -e "\e[92m$1 exists in home directory going there\e[39m"
+    elif 
+      builtin cd "$HOME/dev/$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in dev directory going there\e[39m"
+    elif
+      builtin cd "../$1" 3>&2 2>/dev/null
+    then
+      echo  -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    elif
+      builtin cd "../../../../$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in parent directory going there\e[39m"
+    #current popular project
+    elif
+      builtin cd "$HOME/dev/themove/$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in themove directory going there\e[39m"
     else
       echo -e "\e[31mbash: cd $1 No such file or directory"
     fi
   fi
 
   IFS="/"; declare -a Array=($PWD)
-  export PS1="\e[34m${Array[-1]} \e[39m\$ "
+  export PS1="\e[34m${Array[-1]} \e[90m \n\$\e[39m "
+  #export PS1="\e[34m${Array[-1]} \e[39m\$ "
   unset IFS
 }
 
@@ -186,3 +210,8 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias pull='git pull origin master'
+alias push='git push'
+
+eval "$(thefuck --alias)"

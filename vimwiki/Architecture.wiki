@@ -1,0 +1,39 @@
+# TheMoveHQ Tech Architecture
+
+TheMoveHQ is made of a number of different parts, that work in unison with eachother.
+
+1. Data Population
+2. Person/Places/Websites of Interest
+3. Data Store
+4. Filtering / Analytics
+5. Messaging Service
+6. Event Review
+
+## Data Population
+Utilizing api's to retreive data such as Eventbrite or Meetup, we can search and find extensions events within cities. On services such as Instagram or individual websites, where no API is readily available we implement a web-scraping services that grabs relevant data and imports it into our data.
+
+These services will run periodically through the day, finding and saving events regularly.
+
+## Person/Places/Websites of Interest
+In order to find these events we must know where to look for them. Initially we will manually seed to network with people who are known to promote events in the speicific city. This manual step can be costly for time, so in the future we plan on implementing machine learning.
+
+With machine learning we can utilize the data we have, to find out who or where are the places that are most likely to host events that would be well-received by our target audience. At the click of a button, a neural network would be spun up to identify the places/people in new cities.
+
+## Data Store
+A Postgres database server will be used to store the independent data. Caching will also be implented via Redis and NGINX.
+
+## Filtering / Analytics
+Since there are a enormously high amount of events that go through any given city. The filtering of this data is extremely important. The filtering and analytics works hand-in-hand with eachother. The filter will identity which events (hopefully with high propbablity) that we would want to include in the newsletter. With more data the algorithm will be more trustful. This analytics engine will implement AI for thr learning of this algorithm. The learning also helps identity Person/Places of interest.
+
+
+## Messaging Service
+The messaging service is what ties all the modules together. Utilizing a kafka service in order to handle the high throughput we may may. Since the modules work in sync it is important to keep the communication online between eachother.
+
+A standard message timeline would be:
+1. Event Information received (through scraper or api)
+2. Message sent to database to store event data
+3. Message sent to filter to decide if event should be kept or removed, updating any analytics
+4. Message sent to database to update event based on filter
+
+## Event Review
+Another implementation of AI/Deep Learning to calculate sentiment towards and event. We would be able to conclude what events were the best from social media feedback/reviews. Also would be able to identity what factors may affect the success of an event. Therefore being able to identity great events before they happen, and offer insight into what makes an event great.
