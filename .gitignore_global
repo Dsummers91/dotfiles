@@ -2,6 +2,7 @@
 my-scripts/
 .envrc
 
+out/
 # Compiled source #
 ###################
 #*.com
@@ -10,6 +11,7 @@ my-scripts/
 *.exe
 *.o
 *.so
+*.out
 
 # Packages #
 ############

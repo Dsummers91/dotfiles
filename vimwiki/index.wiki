@@ -1,4 +1,4 @@
-= My knowledge base =
+= Deon Wiki =
     * [[Tasks]]
     * [[The Move]] - The Move HQ
     * [[Project 170]] -- Getting up to 170 punds

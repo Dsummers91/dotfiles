@@ -123,9 +123,6 @@ export PATH=${HOME}/.npm-global/bin:$PATH
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH=$PATH:$HOME/.rvm/bin
-#source "$HOME/.rvm/scripts/rvm"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/home/deon/golang
 export PATH=$PATH:/home/deon/golang/bin
@@ -135,6 +132,8 @@ export PATH=$PATH:$HOME/.daml/bin
 export PATH=$PATH:$HOME/.mvn/bin
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cargo/bin
+#export PATH=$HOME/bin:$PATH
 
 #toggle=$((pactl list sinks | grep -q Mute:.no && echo 1) || echo 0)
 #pactl set-sink-mute 0 $toggle
@@ -182,6 +181,10 @@ cd() {
       builtin cd "$HOME/dev/themove/$1" 3>&2 2>/dev/null
     then
       echo -e "\e[92m$1 exists in themove directory going there\e[39m"
+    elif
+      builtin cd "$HOME/dev/hashed/$1" 3>&2 2>/dev/null
+    then
+      echo -e "\e[92m$1 exists in hashed directory going there\e[39m"
     else
       echo -e "\e[31mbash: cd $1 No such file or directory"
     fi
@@ -198,7 +201,6 @@ if [ -e /home/deon/.nix-profile/etc/profile.d/nix.sh ]; then . /home/deon/.nix-p
 
 
 eval "$(direnv hook bash)"
-alias rusti="rustup run nightly-2016-08-01 ~/.cargo/bin/rusti"
 export GPG_TTY=$(tty)
 
 
