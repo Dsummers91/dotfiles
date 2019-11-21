@@ -1,0 +1,20 @@
+=== Event Page ===
+Most people come directly to specific event if acquired from newsletter. We need to make sure they can transition to other events/ sources of information as easily as possible.
+Possible things to do:
+- Show popular events (based on clicks or tickets bought)
+- Show other events around the same time (Maybe need to reconsider showing events that are same time as event page)
+- Share Buttons
+
+=== Explore Page ===
+Needs some reconstruction in terms of formatting
+Event Criteria takes up half of page, need to slim down so user gets glimpse of events on page load
+Better way to query data (Only show free events, show different vibes, etc)
+
+=== FUTURE === 
+* Success Page after people buy ticker
+* Log if user drops off after not buying ticket when clicking buy
+* Carousel of event for that week for that week
+* Similar events in a carousel / Cateogirze my moob/vive?``;sq
+* Organizer Page
+
+

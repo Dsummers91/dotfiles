@@ -5,6 +5,13 @@
 * [[TM Tech Stack]]
 * [[Move - Client side notes]]
 
+
+=== From Meet ===
+Client Side Changes
+Host Newsletter on site
+Group Chats
+Ananoymous Cookues
+
 ==== Bugs ====
 - [ ] Fix Eventbrite Queries
 - [ ] Fix Populator
@@ -15,7 +22,7 @@
 
 ==== Immediate Tasks ====
 - [ ] Add edit buttons on admin pages
-- [ ] update avatars on daily event scrapings if updated
+- [X] update avatars on daily event scrapings if updated
 - [ ] Update splash image background
 
 === Important But not Urgent? ===
