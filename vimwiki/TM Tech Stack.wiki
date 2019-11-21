@@ -1,0 +1,32 @@
+== Front End ==
+* Server Side React (future)
+* Redux
+  - Possibly Sagas
+* Material UI
+
+== Back End ==
+* Python / Flask
+* SQL Alchemy
+* GUnicorn
+* Kafka (future)
+
+=== Database ===
+* Postgres
+* Alembic for DB Migrations
+
+== Dev Ops ==
+* Docker
+* Kubernetes
+* Nginx
+* Memcached
+* (Possibly Email Octopus in future)
+* ~~(Probably will need to implement Redis in future)~~ Will be using memcache
+
+
+== AWS ==
+* Files stored on AWS S3
+* HTTP Server Deployes on AWS EC2 instances
+* Emails are through AWS Workmail
+* Domain hosted using AWS Route 53
+* AWS Cloudfront for Caching
+* AWS CodePipeline for Deployments
