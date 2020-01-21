@@ -5,43 +5,7 @@
 * [[TM Tech Stack]]
 * [[Move - Client side notes]]
 
-
-=== From Meet ===
-Client Side Changes
-Host Newsletter on site
-Group Chats
-Ananoymous Cookues
-
-==== Bugs ====
-- [ ] Fix Eventbrite Queries
-- [ ] Fix Populator
-
-=== Feature ===
-- [ ] Grab GeoIP Data on IP Address
-- [ ] Auto Select Based on City
-
-==== Immediate Tasks ====
-- [ ] Add edit buttons on admin pages
-- [X] update avatars on daily event scrapings if updated
-- [ ] Update splash image background
-
-=== Important But not Urgent? ===
-- [ ] Set anonymous cookies for users we dont know for tracking
-- [ ] Create Platform Table (Eventbrite/TicketMaster/etc)
-- [ ] Automatically grab long summary from eventbrite
-- [ ] Add Time Zone field for cities
-
-=== Research ===
-- [ ] Invite Link after member buys tickets to group
-- [ ] GroupMe API
-
-==== Backlog ====
-- [ ] Duplicate Database from Prod to Staging (daily?/weekly?)
-- [ ] Setup Load Balancing for API Endpoints / Possibly move to serverless
-- [ ] Setup Kafka
-- [ ] Automate Filters
-- [ ] Better Filtering (Approve, right now its only reject)
-- [ ] Integrate with more websites
+=== Important AF ===
 * Create Test Cases
   - [ ] Filter
   - [ ] Populator
@@ -50,3 +14,32 @@ Ananoymous Cookues
   - [ ] Client
 - [ ] Create a CI/CD Pipeline
 - [ ] Setup CD for API Gateway
+
+==== Immediate Tasks ====
+- [ ] Add Time Zone field for cities
+- [ ] Add edit buttons on admin pages
+- [X] Setup event based logging
+
+=== Feature ===
+- [ ] Set anonymous cookies for users we dont know for tracking
+- [X] Create Platform Table (Eventbrite/TicketMaster/etc)
+- [X] Automatically grab long summary from eventbrite
+- [ ] Grab GeoIP Data on IP Address
+- [ ] Auto Select Based on City
+- [ ] Links to explore page on event pages
+- [ ] Setup Proxy to Google Analytics for desktop blockers
+
+=== Client Side Features ===
+- [ ] Click image to expand on event page
+- [ ] Toggle between list vs card view on explore
+
+=== Research ===
+- [X] GroupMe API
+
+==== Backlog ====
+- [ ] Duplicate Database from Prod to Staging (daily?/weekly?)
+- [X] Setup Load Balancing for API Endpoints / Possibly move to serverless
+- [ ] Setup Kafka / AWS SNS
+- [ ] Automate Filters
+- [ ] Better Filtering (Approve, right now its only reject)
+- [ ] Integrate with more websites

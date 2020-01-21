@@ -133,6 +133,8 @@ export PATH=$PATH:$HOME/.mvn/bin
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.java/bin
+export PATH=$PATH:/opt/gradle/gradle-6.0.1/bin
 #export PATH=$HOME/bin:$PATH
 
 #toggle=$((pactl list sinks | grep -q Mute:.no && echo 1) || echo 0)

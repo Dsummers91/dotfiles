@@ -33,6 +33,11 @@ filetype plugin indent on
 " On pressing tab, insert 2 spaces
  set expandtab
 
+" Fold
+" set foldmethod=syntax
+" set foldlevel=0
+" set foldclose=all
+
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
   " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo

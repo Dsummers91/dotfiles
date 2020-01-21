@@ -22,6 +22,7 @@ curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt-get install -y nodejs
 
 curl https://sh.rustup.rs -sSf | sh
+curl -sSL https://get.daml.com/ | sh
 
 pip3 install awscli --upgrade --user
 
