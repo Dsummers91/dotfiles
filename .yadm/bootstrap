@@ -11,7 +11,7 @@ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`
 
 sudo apt update -y
 
-sudo apt install jq postgresql arandr postgresql-contrib python3-dev pgadmin4 pgadmin4-apache2 python3-pip python3-setuptools python3-venv gtk3-nocsd vim terminator terminology direnv libpq-dev thefuck build-essential libx11-dev httpie ranger -y
+sudo apt install i3 elixir jq postgresql arandr postgresql-contrib python3-dev pgadmin4 pgadmin4-apache2 python3-pip python3-setuptools python3-venv gtk3-nocsd vim terminator terminology direnv libpq-dev thefuck build-essential libx11-dev httpie ranger -y
 
 # Using Ubuntu
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
